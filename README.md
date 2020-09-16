@@ -10,6 +10,14 @@ This tool lets to paste/stamp any image on the canvas. When you select this tool
 You can see the image live wherever your cursor goes and when you click the image is placed on canvas and you still have the live preview image following where the mouse goes.
 
 
+## Added Features
+ - Option to name the saved file when clicking "Save image"
+
+## Ideas
+ - Option to set width/heigh of the canvas
+ - Use HTML5 Color Picker for `colorP`
+
+
 
 ## Resources Used
  - Pencil Icon: https://www.iconfinder.com/icons/2931178/change_creative_design_draw_edit_pen_pencil_icon
