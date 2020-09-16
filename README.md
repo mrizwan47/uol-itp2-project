@@ -12,8 +12,8 @@ You can see the image live wherever your cursor goes and when you click the imag
 
 
 ## Resources Used
- - Pencil Icon: https://www.iconfinder.com/icons/2931178/change_creative_design_draw_edit_pen_pencil_icon\
- - Spray Icon: https://www.iconfinder.com/icons/6140916/color_design_graphic_paint_spray_icon\
- - Line Icon: https://www.iconfinder.com/icons/2931142/line_minimize_minus_remove_icon\
- - mirror Icon: https://www.iconfinder.com/icons/6602480/design_graphic_mirror_reflect_symmetry_tool_icon\
- - Stamp Icon: https://www.iconfinder.com/icons/2784251/business_finance_money_print_stamp_icon}
+ - Pencil Icon: https://www.iconfinder.com/icons/2931178/change_creative_design_draw_edit_pen_pencil_icon
+ - Spray Icon: https://www.iconfinder.com/icons/6140916/color_design_graphic_paint_spray_icon
+ - Line Icon: https://www.iconfinder.com/icons/2931142/line_minimize_minus_remove_icon
+ - mirror Icon: https://www.iconfinder.com/icons/6602480/design_graphic_mirror_reflect_symmetry_tool_icon
+ - Stamp Icon: https://www.iconfinder.com/icons/2784251/business_finance_money_print_stamp_icon
