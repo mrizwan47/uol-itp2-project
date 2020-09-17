@@ -4,8 +4,7 @@
  * Simply erases anything on the canvas. Deep down, it's just paining white.
  * Allows user to increase/decrease the size of eraser
  * ALlows user to preview to-be-erased part of the canvas
- * 
- * TODO: Ability to change shape of the eraser
+ * Allows to change shape of the eraser
  * 
  */
 function EraserTool(){
