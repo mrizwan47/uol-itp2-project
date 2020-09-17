@@ -1,3 +1,13 @@
+/**
+ * This tool stamps or pastes selected/uploaded photo to the canvas
+ * Allow user to preview the icon wherever mouse goes
+ * When user clicks the image is stamped/pasted on the canvas
+ * 
+ * There's option to increase/decrease size of the image.
+ * 
+ * TODO: Has ability to select built-in images/icons/shapes
+ * 
+ */
 function stampTool() {
 
 	this.name = "stampTool";
@@ -55,8 +65,6 @@ function stampTool() {
 
 		// push the drawing state so that we can set the stroke weight and colour
 		push();
-		strokeWeight(1);
-		stroke("black");
 
 		// show the selected/uploaded stamp image with cursor
 		if( stampImage !== null ){
@@ -80,8 +88,8 @@ function stampTool() {
 
 	};
 
-	// adds a button and click handler to the options area. When clicked
-	// toggle the line of symmetry between horizonatl to vertical
+	// Adds an input field to upload image and a slider to
+	// increase/decrease the size of stamp
 	this.populateOptions = function() {
 
 		stampFileDiv = createDiv('Upload Image for Stamp: <br />');
