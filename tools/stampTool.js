@@ -34,7 +34,7 @@ function stampTool() {
 
 		// do the drawing if the mouse is pressed 
 		// And image has been uploaded
- 		if ( mouseIsPressed && stampImage !== null ) {
+ 		if ( mousePressedInCanvas() && stampImage !== null ) {
 			
 			// if the previous values are -1 set them to the current mouse location
 			if (previousMouseX == -1) {

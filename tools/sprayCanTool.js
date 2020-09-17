@@ -8,7 +8,7 @@ function SprayCanTool(){
 
 	this.draw = function(){
 		var r = random(5,10);
-		if(mouseIsPressed){
+		if(mousePressedInCanvas()){
 			for(var i = 0; i < points; i++){
 				point(random(mouseX-spread, mouseX + spread), random(mouseY-spread, mouseY+spread));
 			}

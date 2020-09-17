@@ -23,7 +23,7 @@ function EraserTool(){
 		updatePixels();
 
 		// only erase when mouse is clicked
-		if( mouseIsPressed ){
+		if( mousePressedInCanvas() ){
 
 			// Erase this part of canvas
 			noStroke();
@@ -131,9 +131,8 @@ function EraserTool(){
 
 		}
 
-		fill(colourP.selectedColour);
-		stroke(colourP.selectedColour);
-		strokeWeight(1)
+		colourP.resetColors();
+
 
 	};
 

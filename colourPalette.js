@@ -31,6 +31,17 @@ function ColourPalette() {
 
 	}
 
+	/**
+	 * Resets color, stroke etc back to what user selected
+	 */
+	this.resetColors = function(){
+
+		fill(this.selectedColour);
+		stroke(this.selectedColour);
+		strokeWeight(1);
+
+	}
+
 	// load in the colours
 	this.loadColours = function() {
 		

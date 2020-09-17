@@ -26,6 +26,7 @@ function setup() {
 	toolbox.addTool(new mirrorDrawTool());
 	toolbox.addTool(new stampTool());
 	toolbox.addTool(new EraserTool());
+	toolbox.addTool(new CutTool());
 	background(255);
 
 }

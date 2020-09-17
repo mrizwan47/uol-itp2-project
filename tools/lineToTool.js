@@ -14,7 +14,7 @@ function LineToTool(){
 	this.draw = function(){
 
 		// only draw when mouse is clicked
-		if( mouseIsPressed ){
+		if( mousePressedInCanvas() ){
 			
 			// if it's the start of drawing a new line
 			if(startMouseX == -1){

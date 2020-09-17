@@ -36,3 +36,36 @@ function HelperFunctions() {
 	});
 
 }
+
+
+/**
+ * Checks if mouse pressed inside canvas
+ * 
+ * @returns boolean
+ * 
+ */
+function mousePressedInCanvas(){
+
+	if( mouseIsPressed ){
+
+		if( 
+			// mouseX > canvasContainer.elt.offsetLeft &&
+			// mouseX < (canvasContainer.elt.offsetLeft + canvasContainer.width) &&
+
+			// mouseY > canvasContainer.elt.offsetTop &&
+			// mouseY < (canvasContainer.elt.offsetTop + canvasContainer.height)
+			mouseX > 0 &&
+			mouseX < canvasContainer.width &&
+
+			mouseY > 0 &&
+			mouseY < canvasContainer.height
+		){
+			console.log('clicked inside canvas');
+			return true;
+		}
+
+	}
+
+	return false;
+
+}

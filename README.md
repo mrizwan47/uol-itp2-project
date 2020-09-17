@@ -43,7 +43,7 @@ TODO
  - Added Eraser tool with option to select shape (round, boxed or triangle) and increase/decrease size of it.
  - Fixed a bug in Stamp tool: Once stamp tool was selected and you select any other tool you won't be able to draw anything on canvas.
  - Decided to make cut tool for my 3rd extension.
- - 
+ - Created `resetColors()` method in `ColourPalette` class
  
 
 
@@ -56,4 +56,4 @@ _Disclaimer: Due to covid and some personal reasons I wasn't able to keep up wit
  - mirror Icon: https://www.iconfinder.com/icons/6602480/design_graphic_mirror_reflect_symmetry_tool_icon
  - Stamp Icon: https://www.iconfinder.com/icons/2784251/business_finance_money_print_stamp_icon
  - Eraser Icon: https://www.iconfinder.com/icons/6602600/design_eraser_graphic_icon
- - Cut Tool: https://www.iconfinder.com/icons/3605337/razor_cut_tool_stationery_sharp_knife_cutter_icon
+ - Cut Tool: https://www.iconfinder.com/icons/3605337/cut_cutter_knife_razor_sharp_stationery_tool_icon

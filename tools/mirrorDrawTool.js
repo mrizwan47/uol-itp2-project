@@ -28,7 +28,7 @@ function mirrorDrawTool() {
 		updatePixels();
 
 		// do the drawing if the mouse is pressed
-		if ( mouseIsPressed ) {
+		if ( mousePressedInCanvas() ) {
 			
 			// if the previous values are -1 set them to the current mouse location
 			// and mirrored positions
