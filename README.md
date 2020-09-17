@@ -37,13 +37,16 @@ TODO
  - Added option to rename file when saving image and styled the buttons
  - Finished stamp tool, it has ability for user to upload any image and increase/decrease it's size.
  - Made a private github repo and added readme.md to keep track of features, extensions, logs and resources list.
- - **Known issue:** When clicking outside the canvas, the stamp tool still draws the image.
+ - ~~**Known issue 1.1:** When clicking outside the canvas, the stamp tool still draws the image.~~
 
 ### 17 September, 2020
  - Added Eraser tool with option to select shape (round, boxed or triangle) and increase/decrease size of it.
  - Fixed a bug in Stamp tool: Once stamp tool was selected and you select any other tool you won't be able to draw anything on canvas.
  - Decided to make cut tool for my 3rd extension.
  - Created `resetColors()` method in `ColourPalette` class
+ - Fixed known issue 1.1 from yesterday.
+ - Pushed Cut Tool to the repo
+ - **Known issue 1.2:** When using cuttin tool if we drag from top-left to bottom-right it works fine, otherwise the dimensions for `get` are reversed and we don't get the image.
  
 
 

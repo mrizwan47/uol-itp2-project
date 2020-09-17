@@ -60,7 +60,6 @@ function mousePressedInCanvas(){
 			mouseY > 0 &&
 			mouseY < canvasContainer.height
 		){
-			console.log('clicked inside canvas');
 			return true;
 		}
 
