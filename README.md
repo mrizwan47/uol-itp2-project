@@ -6,6 +6,7 @@ This is my school project for University of London.
 This tool lets to paste/stamp any image on the canvas. When you select this tool you get 2 options populated on bottom part:
  - An option to upload image
  - A slider to chose size of the image
+ - TODO: Option to select built-in images
 
 You can see the image live wherever your cursor goes and when you click the image is placed on canvas and you still have the live preview image following where the mouse goes.
 
@@ -15,8 +16,10 @@ TODO
 ### 3. Shape Tool
 TODO
 
-### 4. Erasor Tool
-TODO
+### 4. Eraser Tool
+This tool erases anything from the canvas (in basic terms, it only paints white on the canvas). Has the option to:
+ - Select shape of eraser (boxed, round or triangle)
+ - Increase/Decrease the size of eraser with a slider
 
 
 ## Added Features
@@ -29,8 +32,6 @@ TODO
 
 
 ## ~~Weekly~~ Daily Logs
-Due to covid and some personal reasons I wasn't able to keep up with studies and this all project was done under 1 week. 
-
 
 ### 16 September, 2020
  - Downloaded template project.
@@ -42,10 +43,12 @@ Due to covid and some personal reasons I wasn't able to keep up with studies and
  - **Known issue:** When clicking outside the canvas, the stamp tool still draws the image.
 
 ### 17 September, 2020
+ - Added Eraser tool with option to select shape (round, boxed or triangle) and increase/decrease size of it.
+ - Fixed a bug in Stamp tool: Once stamp tool was selected and you select any other tool you won't be able to draw anything on canvas.
+ 
 
 
-
-_Disclaimer: That's why no weekly logs, only daily. I've been coding professionally for 8 years, so 1 week is no big deal._
+_Disclaimer: Due to covid and some personal reasons I wasn't able to keep up with studies and this all project was done under 1 week. That's why no weekly logs, only daily. I've been coding professionally for 8 years, so 1 week is no big deal._
 
 ## Resources Used
  - Pencil Icon: https://www.iconfinder.com/icons/2931178/change_creative_design_draw_edit_pen_pencil_icon
@@ -53,3 +56,4 @@ _Disclaimer: That's why no weekly logs, only daily. I've been coding professiona
  - Line Icon: https://www.iconfinder.com/icons/2931142/line_minimize_minus_remove_icon
  - mirror Icon: https://www.iconfinder.com/icons/6602480/design_graphic_mirror_reflect_symmetry_tool_icon
  - Stamp Icon: https://www.iconfinder.com/icons/2784251/business_finance_money_print_stamp_icon
+ - Eraser Icon: https://www.iconfinder.com/icons/6602600/design_eraser_graphic_icon
