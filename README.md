@@ -10,17 +10,14 @@ This tool lets to paste/stamp any image on the canvas. When you select this tool
 
 You can see the image live wherever your cursor goes and when you click the image is placed on canvas and you still have the live preview image following where the mouse goes.
 
-### 2. Scissor/Cut Tool
-TODO
-
-### 3. Shape Tool
-TODO
-
-### 4. Eraser Tool
+### 2. Eraser Tool
 This tool erases anything from the canvas (in basic terms, it only paints white on the canvas). Has the option to:
  - Select shape of eraser (boxed, round or triangle)
  - Increase/Decrease the size of eraser with a slider
 
+
+### 3. Cut Tool
+TODO
 
 ## Added Features
  - Option to name the saved file when clicking "Save image"
@@ -45,6 +42,8 @@ This tool erases anything from the canvas (in basic terms, it only paints white 
 ### 17 September, 2020
  - Added Eraser tool with option to select shape (round, boxed or triangle) and increase/decrease size of it.
  - Fixed a bug in Stamp tool: Once stamp tool was selected and you select any other tool you won't be able to draw anything on canvas.
+ - Decided to make cut tool for my 3rd extension.
+ - 
  
 
 
@@ -57,3 +56,4 @@ _Disclaimer: Due to covid and some personal reasons I wasn't able to keep up wit
  - mirror Icon: https://www.iconfinder.com/icons/6602480/design_graphic_mirror_reflect_symmetry_tool_icon
  - Stamp Icon: https://www.iconfinder.com/icons/2784251/business_finance_money_print_stamp_icon
  - Eraser Icon: https://www.iconfinder.com/icons/6602600/design_eraser_graphic_icon
+ - Cut Tool: https://www.iconfinder.com/icons/3605337/razor_cut_tool_stationery_sharp_knife_cutter_icon
