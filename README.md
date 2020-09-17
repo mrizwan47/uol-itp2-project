@@ -28,6 +28,25 @@ TODO
 
 
 
+## ~~Weekly~~ Daily Logs
+Due to covid and some personal reasons I wasn't able to keep up with studies and this all project was done under 1 week. 
+
+
+### 16 September, 2020
+ - Downloaded template project.
+ - Started making StampTool
+ - The icons weren't to my liking, so changed them from iconfinder.com
+ - Added option to rename file when saving image and styled the buttons
+ - Finished stamp tool, it has ability for user to upload any image and increase/decrease it's size.
+ - Made a private github repo and added readme.md to keep track of features, extensions, logs and resources list.
+ - **Known issue:** When clicking outside the canvas, the stamp tool still draws the image.
+
+### 17 September, 2020
+
+
+
+_Disclaimer: That's why no weekly logs, only daily. I've been coding professionally for 8 years, so 1 week is no big deal._
+
 ## Resources Used
  - Pencil Icon: https://www.iconfinder.com/icons/2931178/change_creative_design_draw_edit_pen_pencil_icon
  - Spray Icon: https://www.iconfinder.com/icons/6140916/color_design_graphic_paint_spray_icon
