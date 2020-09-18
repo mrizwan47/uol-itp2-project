@@ -2,7 +2,7 @@
 This is my school project for University of London.
 
 ## Tools Extensions
-### 1. Stamp Tool
+### 1. NEW: Stamp Tool
 This tool lets to paste/stamp any image on the canvas. When you select this tool you get 2 options populated on bottom part:
  - An option to upload image
  - A slider to chose size of the image
@@ -10,14 +10,14 @@ This tool lets to paste/stamp any image on the canvas. When you select this tool
 
 You can see the image live wherever your cursor goes and when you click the image is placed on canvas and you still have the live preview image following where the mouse goes.
 
-### 2. Eraser Tool
+### 2. NEW: Eraser Tool
 This tool erases anything from the canvas (in basic terms, it only paints white on the canvas). Has the option to:
  - Select shape of eraser (boxed, round or triangle)
  - Increase/Decrease the size of eraser with a slider
 
 
-### 3. Cut Tool
-TODO
+### 3. NEW: Cut Tool
+This tool let's user cut any part of the canvas. I plan to introduce circular, freehand and point-by-point cutting like in Adobe Photoshop but currently it only supports rectangular cutting.
 
 ## Added Features
  - Option to name the saved file when clicking "Save image"
@@ -46,7 +46,13 @@ TODO
  - Created `resetColors()` method in `ColourPalette` class
  - Fixed known issue 1.1 from yesterday.
  - Pushed Cut Tool to the repo
- - **Known issue 1.2:** When using cuttin tool if we drag from top-left to bottom-right it works fine, otherwise the dimensions for `get` are reversed and we don't get the image.
+ - ~~**Known issue 1.2:** When using cuttin tool if we drag from top-left to bottom-right it works fine, otherwise the dimensions for `get` are reversed and we don't get the image.~~
+
+
+### 18 September, 2020
+ - Fixed known issue 1.2 in Cutting Tool
+ - Found Bug in Stamp Tool: When I upload any image, it's placed on bottom of the page as well.
+ - 
  
 
 
