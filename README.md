@@ -54,6 +54,11 @@ This tool let's user cut any part of the canvas. I plan to introduce circular, f
  - Found Bug in Stamp Tool: When I upload any image, it's placed on bottom of the page as well.
  - Fixed Stamp Tool
  - Added 11 built-in stamps in Stamp Tool
+ - Pencil Tool: Added option to increase/decrease thickness
+ - LineTool: Added option to increase/decrease line width
+ - Mirror Tool: Added option to increase/decrease thickness of line
+ - Spray Tool: Added Droplets Thickness + Spray Size + Density options
+ - Some minor UX fixes and cleaning code
  
 
 
