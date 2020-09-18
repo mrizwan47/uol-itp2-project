@@ -27,6 +27,54 @@ function stampTool() {
 	var imageWidth = 30;
 	var imageHeight = 30;
 
+	// Built-in stamps
+	var stampsList = [
+		{
+			name: 'Home',
+			path: 'assets/stamps/home.png'
+		},
+		{
+			name: 'Dog',
+			path: 'assets/stamps/dog.png'
+		},
+		{
+			name: 'Cat',
+			path: 'assets/stamps/cat.png'
+		},
+		{
+			name: 'Panda',
+			path: 'assets/stamps/panda.png'
+		},
+		{
+			name: 'Linkedin',
+			path: 'assets/stamps/linkedin.png'
+		},
+		{
+			name: 'Facebook',
+			path: 'assets/stamps/facebook.png'
+		},
+		{
+			name: 'Twitter',
+			path: 'assets/stamps/twitter.png'
+		},
+		{
+			name: 'Snapchat',
+			path: 'assets/stamps/snapchat.png'
+		},
+		{
+			name: 'Star',
+			path: 'assets/stamps/star.png'
+		},
+		{
+			name: 'Heart',
+			path: 'assets/stamps/heart.png'
+		},
+		{
+			name: 'Be Mine',
+			path: 'assets/stamps/be-mine.png'
+		}
+	];
+
 	this.draw = function() {
 
 		// display the last save state of pixels
@@ -92,7 +140,24 @@ function stampTool() {
 	// increase/decrease the size of stamp
 	this.populateOptions = function() {
 
-		stampFileDiv = createDiv('Upload Image for Stamp: <br />');
+		// Select input to select built-in stamps
+		stampsDiv = createDiv('Stamps: <br />');
+		sel = createSelect();
+		
+		for (let i = 0; i < stampsList.length; i++) {
+			sel.option(stampsList[i].name, stampsList[i].path);
+		}
+
+		stampImage = loadImage(stampsList[0].path);
+
+		sel.changed(function(v){
+			stampImage = loadImage(this.value());
+		});
+		sel.parent(stampsDiv);
+		stampsDiv.parent('toolsOptions');
+
+		// File Input to upload custom stamp
+		stampFileDiv = createDiv('Custom Stamp: <br />');
 		input = createFileInput(function(file){
 			if (file.type === 'image') {
 				stampImage = loadImage(file.data);
@@ -102,6 +167,7 @@ function stampTool() {
 		stampFileDiv.parent('toolsOptions');
 		
 
+		// Slider to increase/decrease size of stamp
 		stampSizeDiv = createDiv('Size: <br />');
 		slider = createSlider(5, 150, 30);
 		slider.input(function(){
