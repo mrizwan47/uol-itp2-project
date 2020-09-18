@@ -95,7 +95,7 @@ function stampTool() {
 		stampFileDiv = createDiv('Upload Image for Stamp: <br />');
 		input = createFileInput(function(file){
 			if (file.type === 'image') {
-				stampImage = createImg(file.data);
+				stampImage = loadImage(file.data);
 			}
 		});
 		input.parent(stampFileDiv);
