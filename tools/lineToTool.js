@@ -10,6 +10,8 @@ function LineToTool(){
 	var startMouseY = -1;
 	var drawing = false;
 
+	var lineWidth = 1;
+
 	// draws the line to the screen 
 	this.draw = function(){
 
@@ -32,7 +34,9 @@ function LineToTool(){
 				updatePixels();
 				
 				// draw the line
+				strokeWeight(lineWidth);
 				line(startMouseX, startMouseY, mouseX, mouseY);
+				colourP.resetColors();
 
 			}
 
@@ -48,6 +52,28 @@ function LineToTool(){
 		}
 
 	};
+
+
+	// when the tool is deselected clear options
+	this.unselectTool = function() {
+		select(".options").html("");
+	};
+
+	// Add options
+	this.populateOptions = function() {
+
+		// Adds a slider to increase/decrease the thickness of line
+		lineThicknessDiv = createDiv('Line Thickness: <br />');
+		slider = createSlider(1, 20, lineWidth);
+		slider.input(function(){
+			lineWidth = this.value();
+		});
+		slider.parent(lineThicknessDiv);
+		lineThicknessDiv.parent('toolsOptions');
+
+
+	};
+
 
 
 }
