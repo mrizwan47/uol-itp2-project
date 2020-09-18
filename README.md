@@ -2,25 +2,43 @@
 This is my school project for University of London.
 
 ## Tools Extensions
-### 1. NEW: Stamp Tool
-This tool lets to paste/stamp any image on the canvas. When you select this tool you get 2 options populated on bottom part:
- - An option to upload image
- - A slider to chose size of the image
- - Option to select from 11 built-in images
 
-You can see the image live wherever your cursor goes and when you click the image is placed on canvas and you still have the live preview image following where the mouse goes.
+### 1. ADDED: Stamp Tool
+This tool lets the user paste/stamp 11 built-in images (selectable) on the canvas. When you select this tool you get 3 options populated on the bottom part:
+ - An option to select from 11 built-in images
+ - OR upload any image from your computer
+ - A slider to choose the size of the image
 
-### 2. NEW: Eraser Tool
-This tool erases anything from the canvas (in basic terms, it only paints white on the canvas). Has the option to:
+You can see the live preview of the image wherever your cursor goes and when you click on canvas, the image is placed on canvas and you still have the live preview image following the pointer.
+
+**Under the Hood**
+ - Live Preview: Draw function checks if the `stampImage` is not `null` it will save the current canvas state and then draw the `stampImage` centered to the mouse position and then pop that saved state back.
+ - Pasting image: In draw function, the app checks if `stampImage` is not `null` and mouse if pressed inside canvas. If that condition is met, it'll simply use `image()` function of p5js to place image centered on the mouse position.
+
+### 2. ADDED: Eraser Tool
+This tool erases anything from the canvas. Has the option to:
  - Select shape of eraser (boxed, round or triangle)
  - Increase/Decrease the size of eraser with a slider
 
+**Under the Hood**
+ - Eraser Preview: uses the same technique like Stamp Tool's preview.
+ - For actual erasing part, it simply draws `rect`, `ellipse` or `triangle` on the canvas
 
-### 3. NEW: Cut Tool
-This tool let's user cut any part of the canvas. I plan to introduce circular, freehand and point-by-point cutting like in Adobe Photoshop but currently it only supports rectangular cutting.
+
+### 3. ADDED: Cut Tool
+This tool let's user cut any part of the canvas. I plan to introduce circular, freehand and point-by-point cutting like in Adobe Photoshop but currently it only supports rectangular cutting. You simply press mouse button and hold it while draging on the canvas. You see preview of area that will be cut. Once you've selected you have the option to either **discard** the selection or **cut** the selected area. Once cut, the cutted layer will hover wherever your mouse goes. When you click anywhere on canvas the image will be placed there and you can redo the whole process.
+
+**Under the Hood**
+_Everything in this tool is covered by video lectures and the tools above, so to stay in words limit:_
+ - Depending on the cut direction, I had to modify the parameters of `get()` method.
 
 ## Added Features
- - Option to name the saved file when clicking "Save image"
+ - Save image: Option to rename the file
+ - Pencil Tool: Option to increase/decrease thickness
+ - LineTool: Option to increase/decrease line width
+ - Mirror Tool: Option to increase/decrease thickness of line
+ - Spray Tool: Droplets Thickness + Spray Size + Density options
+
 
 ## Ideas
  - Option to set width/heigh of the canvas
@@ -90,3 +108,29 @@ _Disclaimer: Due to covid and some personal reasons I wasn't able to keep up wit
 ### Coding/Reference Help
  - After searching, this article confirmed that `createImg()` function puts the `<img>` tag in DOM: https://github.com/processing/p5.js/issues/3854#issuecomment-507859431
  - Another google search found this reply (after trying `loadImage()` I was able to save image to variable instead of putting it in DOM): https://github.com/processing/p5.js/issues/2658#issuecomment-459817063
+
+Apart from these 2, I only read https://p5js.org/reference/
+
+_Disclaimer: I've been coding professionally for 8 years, so there was rarely anything I couldn't find on p5 docs._
+
+
+
+
+
+
+# Answers I submitted with project:
+
+
+## List the modifications and extension that you have made to the template file (400 words).
+
+
+## Describe how effective your plan was in completing your project (250 words). 
+I wasn't able to keep up with lectures since the beginning of this module. Partially because of COVID and also because of some personal reasons. So, in other words: I had no plan. In fact, I wasn't able to submit midterms report either. In my defense, the midterm deadline for Web Development was extended and I thought the deadline is extended for this module too. 
+
+Anyways, back to my schedule. I started going through lecture videos ~2 weeks before the Final Project deadline. Spent a little more than 1 week on video lectures and reading material. After that, on 16 September, I downloaded the template project and started working on the project. I'm a seasoned programmer with more than 8 years of experience working in javascript, so there was still a lot of time for me to finish the project before the deadline. I finished the project on 18 September.
+
+The most challenging thing I found overall, not specifically to the project, was the 'time management'. If I had been taking regular lectures I wouldn't have to rush myself into finishing the project in a few days. Another thing I found challenging was cutting canvas image in any shape. I planned on adding 'circular', 'free-hand', and 'point to point' layer cutting modes in "Cut Tool". But `get()` function of p5 allowed me to only cut it in a rectangular shape. I searched p5 docs and googled but couldn't find a solution. So, had to drop those features.
+
+
+## Evaluate the process of completing the project and how effective the final product is. (250 words)
+Although the project was completed in a rush but the code structure and integrity is fine. I should have started the project at least 2 weeks before the deadline. That way I wouldn't have exhausted myself to submit the project. After every new feature or bug removed, I'd test the whole application. I would test all the tools using random options to check if anything is breaking. Apart from my own testing, I asked my colleagues (I'm CTO at a software house) to test them on my computer. Some errors found and later fixed. There were 3 testers and all of them really loved the app. They said it reminded them of Microsoft Paint from our childhood, that's why I titled the HTML file "Paint 1985". I really wish I also had time to implement unit testing and make it an npm module.
