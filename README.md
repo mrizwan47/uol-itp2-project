@@ -6,7 +6,7 @@ This is my school project for University of London.
 This tool lets to paste/stamp any image on the canvas. When you select this tool you get 2 options populated on bottom part:
  - An option to upload image
  - A slider to chose size of the image
- - TODO: Option to select built-in images
+ - Option to select from 11 built-in images
 
 You can see the image live wherever your cursor goes and when you click the image is placed on canvas and you still have the live preview image following where the mouse goes.
 
@@ -53,6 +53,7 @@ This tool let's user cut any part of the canvas. I plan to introduce circular, f
  - Fixed known issue 1.2 in Cutting Tool
  - Found Bug in Stamp Tool: When I upload any image, it's placed on bottom of the page as well.
  - Fixed Stamp Tool
+ - Added 11 built-in stamps in Stamp Tool
  
 
 
@@ -68,6 +69,18 @@ _Disclaimer: Due to covid and some personal reasons I wasn't able to keep up wit
  - Stamp Icon: https://www.iconfinder.com/icons/2784251/business_finance_money_print_stamp_icon
  - Eraser Icon: https://www.iconfinder.com/icons/6602600/design_eraser_graphic_icon
  - Cut Tool: https://www.iconfinder.com/icons/3605337/cut_cutter_knife_razor_sharp_stationery_tool_icon
+ - Stamp icons:
+	1. Home: https://www.iconfinder.com/icons/2222742/building_front_home_house_view_icon
+	2. Dog: https://www.iconfinder.com/icons/3316536/animal_cachorro_dog_dogs_icon
+	3. Cat: https://www.iconfinder.com/icons/3316542/animal_cat_cats_gato_icon
+	4. Panda: https://www.iconfinder.com/icons/4591884/animal_bear_cartoon_fauna_herbivore_panda_zoo_icon
+	5. Linkedin: https://www.iconfinder.com/icons/1542393/linkedin_media_social_icon
+	6. Facebook: https://www.iconfinder.com/icons/1542396/facebook_media_social_icon
+	7. Twitter: https://www.iconfinder.com/icons/1542408/media_social_twitter_icon
+	8. Snapchat: https://www.iconfinder.com/icons/1542383/media_snapchat_social_icon
+	9. Star: https://www.iconfinder.com/icons/2792946/christmas_star_xmas_icon
+	10. Heart: https://www.iconfinder.com/icons/2530804/general_heart_heart_beat_heart_disease_heart_rate_heart_shape_office_icon
+	11. Be Mine: https://www.iconfinder.com/icons/2903221/be_mine_stamp_icon
 
 ### Coding/Reference Help
  - After searching, this article confirmed that `createImg()` function puts the `<img>` tag in DOM: https://github.com/processing/p5.js/issues/3854#issuecomment-507859431
