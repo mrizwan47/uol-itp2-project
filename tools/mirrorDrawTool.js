@@ -22,6 +22,9 @@ function mirrorDrawTool() {
 	var previousOppositeMouseX = -1;
 	var previousOppositeMouseY = -1;
 
+	// Line Width
+	var lineWidth = 1;
+
 	this.draw = function() {
 
 		// display the last save state of pixels
@@ -43,6 +46,9 @@ function mirrorDrawTool() {
 			// draw a line between them and the current positions
 			else {
 				
+				// Set line width
+				strokeWeight(lineWidth);
+
 				line(previousMouseX, previousMouseY, mouseX, mouseY);
 				previousMouseX = mouseX;
 				previousMouseY = mouseY;
@@ -54,6 +60,9 @@ function mirrorDrawTool() {
 				line(previousOppositeMouseX, previousOppositeMouseY, oX, oY);
 				previousOppositeMouseX = oX;
 				previousOppositeMouseY = oY;
+
+				// Reset stroke weight
+				colourP.resetColors();
 
 			}
 		}
@@ -155,6 +164,16 @@ function mirrorDrawTool() {
 			}
 
 		});
+
+
+		// Adds a slider to increase/decrease the thickness of pencil
+		pencilThicknessDiv = createDiv('Pencil Thickness: <br />');
+		slider = createSlider(1, 20, lineWidth);
+		slider.input(function(){
+			lineWidth = this.value();
+		});
+		slider.parent(pencilThicknessDiv);
+		pencilThicknessDiv.parent('toolsOptions');
 
 	};
 
