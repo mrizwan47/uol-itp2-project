@@ -49,18 +49,13 @@ function FreehandTool(){
 
 	// when the tool is deselected clear options
 	this.unselectTool = function() {
-
-		// updatePixels();
-
-		// clear options
 		select(".options").html("");
-
 	};
 
-	// Adds a slider to increase/decrease the thickness of pencil
+	// Add options
 	this.populateOptions = function() {
 
-		// Slider to increase/decrease size of stamp
+		// Adds a slider to increase/decrease the thickness of pencil
 		pencilThicknessDiv = createDiv('Pencil Thickness: <br />');
 		slider = createSlider(1, 20, 1);
 		slider.input(function(){
