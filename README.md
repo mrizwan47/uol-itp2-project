@@ -52,13 +52,15 @@ This tool let's user cut any part of the canvas. I plan to introduce circular, f
 ### 18 September, 2020
  - Fixed known issue 1.2 in Cutting Tool
  - Found Bug in Stamp Tool: When I upload any image, it's placed on bottom of the page as well.
- - 
+ - Fixed Stamp Tool
  
 
 
 _Disclaimer: Due to covid and some personal reasons I wasn't able to keep up with studies and this all project was done under 1 week. That's why no weekly logs, only daily. I've been coding professionally for 8 years, so 1 week is no big deal._
 
-## Resources Used
+## Acknowledgement
+
+### Resources Used
  - Pencil Icon: https://www.iconfinder.com/icons/2931178/change_creative_design_draw_edit_pen_pencil_icon
  - Spray Icon: https://www.iconfinder.com/icons/6140916/color_design_graphic_paint_spray_icon
  - Line Icon: https://www.iconfinder.com/icons/2931142/line_minimize_minus_remove_icon
@@ -66,3 +68,7 @@ _Disclaimer: Due to covid and some personal reasons I wasn't able to keep up wit
  - Stamp Icon: https://www.iconfinder.com/icons/2784251/business_finance_money_print_stamp_icon
  - Eraser Icon: https://www.iconfinder.com/icons/6602600/design_eraser_graphic_icon
  - Cut Tool: https://www.iconfinder.com/icons/3605337/cut_cutter_knife_razor_sharp_stationery_tool_icon
+
+### Coding/Reference Help
+ - After searching, this article confirmed that `createImg()` function puts the `<img>` tag in DOM: https://github.com/processing/p5.js/issues/3854#issuecomment-507859431
+ - Another google search found this reply (after trying `loadImage()` I was able to save image to variable instead of putting it in DOM): https://github.com/processing/p5.js/issues/2658#issuecomment-459817063
