@@ -13,7 +13,7 @@ You can see the live preview of the image wherever your cursor goes and when you
 
 **Under the Hood**
  - Live Preview: Draw function checks if the `stampImage` is not `null` it will save the current canvas state and then draw the `stampImage` centered to the mouse position and then pop that saved state back.
- - Pasting image: In draw function, the app checks if `stampImage` is not `null` and mouse if pressed inside canvas. If that condition is met, it'll simply use `image()` function of p5js to place image centered on the mouse position.
+ - Pasting image: In draw function, the app checks if `stampImage` is not `null` and mouse is pressed inside canvas. If that condition is met, it'll simply use `image()` function of p5js to place image centered on the mouse position.
 
 ### 2. ADDED: Eraser Tool
 This tool erases anything from the canvas. Has the option to:
@@ -26,7 +26,7 @@ This tool erases anything from the canvas. Has the option to:
 
 
 ### 3. ADDED: Cut Tool
-This tool let's user cut any part of the canvas. I plan to introduce circular, freehand and point-by-point cutting like in Adobe Photoshop but currently it only supports rectangular cutting. You simply press mouse button and hold it while draging on the canvas. You see preview of area that will be cut. Once you've selected you have the option to either **discard** the selection or **cut** the selected area. Once cut, the cutted layer will hover wherever your mouse goes. When you click anywhere on canvas the image will be placed there and you can redo the whole process.
+This tool let's user cut any part of the canvas. I plan to introduce circular, freehand and point-by-point cutting like in Adobe Photoshop but currently it only supports rectangular cutting. You simply press mouse button and hold it while dragging on the canvas. You see preview of area that will be cut. Once you've selected you have the option to either **discard** the selection or **cut** the selected area. Once cut, the cutted layer will hover wherever your mouse goes (for preview). When you click anywhere on canvas the image will be placed there and you can redo the whole process.
 
 **Under the Hood**
 
