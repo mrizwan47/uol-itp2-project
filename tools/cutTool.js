@@ -17,8 +17,16 @@ function CutTool(){
 	this.icon = "assets/cutTool.jpg";
 	this.name = "CutTool";
 
+	/**
+	 * Cutting Mode
+	 * 
+	 * TODO
+	 */
 	var cuttingMode = 'boxed';
 
+	/**
+	 * Mouse positions
+	 */
 	var startMouseX = -1;
 	var startMouseY = -1;
 	var endMouseX = -1;
@@ -36,7 +44,9 @@ function CutTool(){
 	 */
 	var cuttingPhase = 0;
 
-
+	/**
+	 * Variable containing the freshly cut image
+	 */
 	var toBePastedImage;
 
 	/**
@@ -48,7 +58,6 @@ function CutTool(){
 
 	this.draw = function(){
 
-		console.log(cuttingPhase);
 
 		// only erase when mouse is clicked
 		if( mousePressedInCanvas() && !fixUnresponsiveMousePress ){
@@ -133,12 +142,13 @@ function CutTool(){
 	this.populateOptions = function() {
 
 		// Select input to select cutting mode
-		shapeDiv = createDiv('Cutting Mode: <br />');
+		shapeDiv = createDiv('Cutting Mode (coming soon): <br />');
 		sel = createSelect();
 		sel.option('boxed');
 		sel.option('round');
 		sel.option('freehand (coming soon)');
 		sel.option('point to point (coming soon)');
+		sel.attribute('disabled', true);
 		sel.selected('boxed');
 		sel.changed(function(v){
 			cuttingMode = this.value();
@@ -173,11 +183,40 @@ function CutTool(){
 
 				// Set Cutting phase
 				cuttingPhase = 3;
+				
 
-				toBePastedImage = get(startMouseX, startMouseY, endMouseX-startMouseX, endMouseY-startMouseY);
+				/**
+				 * Depending on the slice direction, we have to modify our 
+				 * parameters for `get` function into 4 categories:
+				 * 
+				 * A: from top-left to bottom-right 		50 28 1013 629	(working)
+				 * B: from top-right to bottom-left			1038 18 39 634
+				 * C: from bottom-left to top-right			50 643 1029 23
+				 * D: from bottom-right to top-left			1033 641 11 15
+				 * 
+				 */
+
+				//  Case A
+				if( startMouseX <= endMouseX && startMouseY <= endMouseY ){
+					toBePastedImage = get(startMouseX, startMouseY, endMouseX-startMouseX, endMouseY-startMouseY);
+				}else 
 				
-				console.log(toBePastedImage);
-				
+				// Case B
+				if( startMouseX >= endMouseX && startMouseY <= endMouseY ){
+					toBePastedImage = get(endMouseX, startMouseY, startMouseX-endMouseX, endMouseY-startMouseY);
+				}else
+
+				// Case C
+				if(startMouseX <= endMouseX && startMouseY >= endMouseY){
+					toBePastedImage = get(startMouseX, endMouseY, endMouseX-startMouseX, startMouseY-endMouseY);
+				}else
+
+				// Case D
+				if(startMouseX >= endMouseX && startMouseY >= endMouseY){
+					toBePastedImage = get(endMouseX, endMouseY, startMouseX-endMouseX, startMouseY-endMouseY);
+				}
+
+
 				// Fill empty with white
 				fill(255);
 				noStroke();
