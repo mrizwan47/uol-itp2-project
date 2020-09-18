@@ -29,6 +29,7 @@ This tool erases anything from the canvas. Has the option to:
 This tool let's user cut any part of the canvas. I plan to introduce circular, freehand and point-by-point cutting like in Adobe Photoshop but currently it only supports rectangular cutting. You simply press mouse button and hold it while draging on the canvas. You see preview of area that will be cut. Once you've selected you have the option to either **discard** the selection or **cut** the selected area. Once cut, the cutted layer will hover wherever your mouse goes. When you click anywhere on canvas the image will be placed there and you can redo the whole process.
 
 **Under the Hood**
+
 _Everything in this tool is covered by video lectures and the tools above, so to stay in words limit:_
  - Depending on the cut direction, I had to modify the parameters of `get()` method.
 
