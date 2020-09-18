@@ -169,7 +169,7 @@ function stampTool() {
 
 		// Slider to increase/decrease size of stamp
 		stampSizeDiv = createDiv('Size: <br />');
-		slider = createSlider(5, 150, 30);
+		slider = createSlider(5, 150, imageWidth);
 		slider.input(function(){
 			imageWidth = this.value();
 			imageHeight = this.value();

@@ -147,23 +147,24 @@ function mirrorDrawTool() {
 	// toggle the line of symmetry between horizonatl to vertical
 	this.populateOptions = function() {
 
-		select(".options").html("<button id='directionButton'>Make Horizontal</button>");
-
-		// click handler
-		select("#directionButton").mouseClicked(function() {
-
-			var button = select("#" + this.elt.id);
+		// Discard Button
+		axisDiv = createDiv('Switch Axis: <br />');
+		discard = createButton('Make Horizontal');
+		discard.mousePressed(function(){
+			
 			if (self.axis == "x") {
 				self.axis = "y";
 				self.lineOfSymmetry = height / 2;
-				button.html('Make Vertical');
+				discard.html('Make Vertical');
 			} else {
 				self.axis = "x";
 				self.lineOfSymmetry = width / 2;
-				button.html('Make Horizontal');
+				discard.html('Make Horizontal');
 			}
 
 		});
+		discard.parent(axisDiv);
+		axisDiv.parent('toolsOptions');
 
 
 		// Adds a slider to increase/decrease the thickness of pencil
