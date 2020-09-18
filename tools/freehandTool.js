@@ -57,7 +57,7 @@ function FreehandTool(){
 
 		// Adds a slider to increase/decrease the thickness of pencil
 		pencilThicknessDiv = createDiv('Pencil Thickness: <br />');
-		slider = createSlider(1, 20, 1);
+		slider = createSlider(1, 20, lineWidth);
 		slider.input(function(){
 			lineWidth = this.value();
 		});
